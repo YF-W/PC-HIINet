@@ -4,7 +4,7 @@
 
 ## The Overview of PC-HIINet (Pixel Carving and Heterogeneous Information Integration Network)
 
-![这是图片](./PC-HIINet.png "Magic Gardens")
+It will be presented after the paper is published.
 
 ## Code Usage
 ### 1. Clone the repository.
