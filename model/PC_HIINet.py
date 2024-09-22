@@ -590,22 +590,22 @@ class PC_HIINet(nn.Module):
 
         # first down
         self.dc1_1 = DoubleConv(in_channels, channels[0], small_kernel, small_padding)
-        self.down1_1 = BWP(channels[0], channels[0])
+        self.down1_1 = FWP(channels[0], channels[0])
         self.dc1_2 = DoubleConv(channels[0], channels[1], small_kernel, small_padding)
-        self.down1_2 = BWP(channels[1], channels[1])
+        self.down1_2 = FWP(channels[1], channels[1])
         self.dc1_3 = DoubleConv(channels[1], channels[2], small_kernel, small_padding)
-        self.down1_3 = FWP(channels[2], channels[2])
+        self.down1_3 = BWP(channels[2], channels[2])
         self.dc1_4 = DoubleConv(channels[2], channels[3], small_kernel, small_padding)
-        self.down1_4 = FWP(channels[3], channels[3])
+        self.down1_4 = BWP(channels[3], channels[3])
 
         self.dc2_1 = DoubleConv(in_channels, channels[0], big_kernel, big_padding)
-        self.down2_1 = BWP(channels[0], channels[0])
+        self.down2_1 = FWP(channels[0], channels[0])
         self.dc2_2 = DoubleConv(channels[0], channels[1], big_kernel, big_padding)
-        self.down2_2 = BWP(channels[1], channels[1])
+        self.down2_2 = FWP(channels[1], channels[1])
         self.dc2_3 = DoubleConv(channels[1], channels[2], big_kernel, big_padding)
-        self.down2_3 = FWP(channels[2], channels[2])
+        self.down2_3 = BWP(channels[2], channels[2])
         self.dc2_4 = DoubleConv(channels[2], channels[3], big_kernel, big_padding)
-        self.down2_4 = FWP(channels[3], channels[3])
+        self.down2_4 = BWP(channels[3], channels[3])
 
         # first bottleneck
         self.bottleneck_1 = DoubleConv(channels[4] + 512, channels[4] * 2)
