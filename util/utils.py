@@ -169,7 +169,7 @@ def val_fn(val_loader, model, device):
 def create_result_dir(model_name, dataset):
     original_path = os.getcwd()
 
-    primary_path = "../../RecordData"
+    primary_path = "../RecordData"
     os.chdir(primary_path)
 
     folder_name = f"{model_name}_{dataset}"
@@ -193,7 +193,7 @@ def create_result_dir(model_name, dataset):
 
     os.chdir(original_path)
 
-    result_path = f"../../RecordData/{folder_name}"
+    result_path = f"../RecordData/{folder_name}"
 
     return result_path
 
